@@ -8,14 +8,14 @@ let { children } = $props()
 	title="Bearcu Adventure"
 	titleTemplate="%s | Bearcu Adventure"
 	description="Petualangan seru bersama beruang lucu"
-	canonical="https://bearcu.svelte.app"
+	canonical="https://bearcu.vercel.app"
 	openGraph={{
-		url: 'https://bearcu.svelte.app/',
+		url: 'https://bearcu.vercel.app/',
 		title: 'Bearcu Adventure',
 		description: 'Petualangan seru bersama beruang lucu',
 		images: [
 			{
-				url: 'https://bearcu.svelte.app/og.jpg',
+				url: 'https://bearcu.vercel.app/og.jpg',
 				width: 1280,
 				height: 720,
 				alt: 'Bearcu Adventure',
@@ -29,7 +29,7 @@ let { children } = $props()
 		cardType: 'summary_large_image',
 		title: 'Bearcu Adventure',
 		description: 'Petualangan seru bersama beruang lucu',
-		image: 'https://bearcu.svelte.app/og.jpg',
+		image: 'https://bearcu.vercel.app/og.jpg',
 		imageAlt: 'Bearcu Adventure',
 	}}
 />
