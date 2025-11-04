@@ -1,4 +1,5 @@
 <script lang="ts">
+import '../app.css'
 import favicon from '$lib/assets/favicon.svg'
 import { MetaTags } from 'svelte-meta-tags'
 let { children } = $props()
