@@ -1,8 +1,9 @@
 <script lang="ts">
 import { cerita } from './data.ts'
 let ruteSaatIni = $state(0)
-let { judul, deskripsi, pilihan, ilustrasi, bg } = $derived(cerita[ruteSaatIni]!)
-$inspect(bg)
+let { judul, deskripsi, pilihan, ilustrasi, bg } = $derived(
+	cerita[ruteSaatIni]!,
+)
 
 const menuju = (ruteBerikutnya: number) => {
 	if (cerita.some((item) => item.rute === ruteBerikutnya)) {
@@ -13,8 +14,16 @@ const menuju = (ruteBerikutnya: number) => {
 }
 </script>
 
+<svelte:head>
+	{#each cerita as { ilustrasi }}
+		{#if ilustrasi}
+			<link rel="preload" href={ilustrasi} as="image" fetchpriority="high">
+		{/if}
+	{/each}
+</svelte:head>
+
 <div class="bg" style:background-color={bg ?? 'white'}>
-	<div class="allcenter" >
+	<div class="allcenter">
 		{#if ruteSaatIni !== 0}
 			<button class="btn-home" onclick={() => menuju(0)}>🏠 Home</button>
 		{/if}
