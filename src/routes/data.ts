@@ -8,9 +8,11 @@ type Cerita = Array<{
 	judul: string
 	deskripsi: string
 	ilustrasi?: string
+	bg?: string
 	pilihan: Pilihan
 }>
 
+const bgGameOver = '#faa'
 const judulGameOver = '՞߹ - ߹՞ GAME OVER'
 const pilihanGameOver: Pilihan = [
 	{
@@ -42,6 +44,7 @@ export const cerita: Cerita = [
 		ilustrasi: '/res/cerita-rumah.jpg',
 		deskripsi:
 			'Bearcu tinggal di rumah sendirian. Apa yang harus Bearcu lakukan?',
+		bg: '#bfb',
 		pilihan: [
 			{
 				teks: 'Makan mie',
@@ -63,6 +66,7 @@ export const cerita: Cerita = [
 		ilustrasi: '/res/cerita-mie.jpg',
 		deskripsi: 'Mie-nya beracun! Tawat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 	{
 		rute: 3,
@@ -70,12 +74,14 @@ export const cerita: Cerita = [
 		ilustrasi: '/res/cerita-tidur.jpg',
 		deskripsi: 'Tidak bisa keluar dari mimpi. Tawat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 	{
 		rute: 4,
 		judul: 'Di Luar Rumah',
 		ilustrasi: '/res/cerita-doraemon.jpg',
 		deskripsi: 'Di luar, Bearcu ketemu Doraemon. Apa yang mesti dilakukan?',
+		bg: '#aff',
 		pilihan: [
 			{
 				teks: 'Berpelukan',
@@ -97,12 +103,14 @@ export const cerita: Cerita = [
 		ilustrasi: '/res/cerita-konslet.jpg',
 		deskripsi: 'Ternyata Doraemon-nya konslet. Tamat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 	{
 		rute: 6,
 		judul: 'Dapat Kantong Ajaib!',
 		ilustrasi: '/res/cerita-marah.jpg',
 		deskripsi: 'Tapi kamu dikejar Doraemon yang marah. Bagaimana ini?',
+		bg: '#faf',
 		pilihan: [
 			{
 				teks: 'Minta maaf',
@@ -125,6 +133,7 @@ export const cerita: Cerita = [
 		deskripsi:
 			'Tubuh Doraemon terbuat dari besi, hingga kaki Bearcu patah tulang. Tamat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 	{
 		rute: 8,
@@ -133,6 +142,7 @@ export const cerita: Cerita = [
 		deskripsi:
 			'Karena terharu atas aksi Bearcu, Doraemon pun mengikhlaskan kantong ajaib itu. Hidup Bearcu semakin bahagia.',
 		pilihan: pilihanGameOver,
+		bg: '#ffa',
 	},
 	{
 		rute: 9,
@@ -141,6 +151,7 @@ export const cerita: Cerita = [
 		deskripsi:
 			'Karena Bearcu jarang olahraga, Doraemon dapat menangkap Bearcu. Tamat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 	{
 		rute: 10,
@@ -149,5 +160,6 @@ export const cerita: Cerita = [
 		deskripsi:
 			'Ironisnya yang ditangkap bukan Doraemon, tapi Bearcu sendiri. Tamat riwayat Bearcu.',
 		pilihan: pilihanGameOver,
+		bg: bgGameOver,
 	},
 ]

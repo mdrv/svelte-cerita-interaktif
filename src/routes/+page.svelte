@@ -1,7 +1,8 @@
 <script lang="ts">
 import { cerita } from './data.ts'
 let ruteSaatIni = $state(0)
-let { judul, deskripsi, pilihan, ilustrasi } = $derived(cerita[ruteSaatIni]!)
+let { judul, deskripsi, pilihan, ilustrasi, bg } = $derived(cerita[ruteSaatIni]!)
+$inspect(bg)
 
 const menuju = (ruteBerikutnya: number) => {
 	if (cerita.some((item) => item.rute === ruteBerikutnya)) {
@@ -12,23 +13,29 @@ const menuju = (ruteBerikutnya: number) => {
 }
 </script>
 
-<div class="allcenter">
-	{#if ruteSaatIni !== 0}
-		<button class="btn-home" onclick={() => menuju(0)}>🏠 Home</button>
-	{/if}
-	<h2>{judul}</h2>
-	{#if ilustrasi}
-		<img src={ilustrasi} alt={ilustrasi} />
-	{/if}
-	<p>{deskripsi}</p>
-	<div class="daftar-pilihan">
-		{#each pilihan as { teks, rute }}
-			<button onclick={() => menuju(rute)}>{teks}</button>
-		{/each}
+<div class="bg" style:background-color={bg ?? 'white'}>
+	<div class="allcenter" >
+		{#if ruteSaatIni !== 0}
+			<button class="btn-home" onclick={() => menuju(0)}>🏠 Home</button>
+		{/if}
+		<h2>{judul}</h2>
+		{#if ilustrasi}
+			<img src={ilustrasi} alt={ilustrasi} />
+		{/if}
+		<p>{deskripsi}</p>
+		<div class="daftar-pilihan">
+			{#each pilihan as { teks, rute }}
+				<button onclick={() => menuju(rute)}>{teks}</button>
+			{/each}
+		</div>
 	</div>
 </div>
 
 <style>
+div.bg {
+	width: 100%;
+}
+
 div.allcenter {
 	display: flex;
 	flex-direction: column;
