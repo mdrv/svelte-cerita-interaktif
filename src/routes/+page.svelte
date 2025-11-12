@@ -26,6 +26,8 @@ const menuju = (ruteBerikutnya: number) => {
 	<div class="allcenter">
 		{#if ruteSaatIni !== 0}
 			<button class="btn-home" onclick={() => menuju(0)}>🏠 Home</button>
+		{:else}
+			<a href="/new" class="editor-link">✏️ Buat Ceritamu Sendiri</a>
 		{/if}
 		<h2>{judul}</h2>
 		{#if ilustrasi}
@@ -74,6 +76,19 @@ div.allcenter {
 button.btn-home {
 	width: 320px;
 	margin: 0 auto;
+}
+
+a.editor-link {
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+	padding: 8px;
+	text-align: center;
+	background: #28a745;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	font-weight: bold;
 }
 
 div.daftar-pilihan {

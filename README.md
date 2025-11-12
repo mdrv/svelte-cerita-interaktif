@@ -1,6 +1,15 @@
-# sv
+# svelte-cerita-interaktif
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A Svelte-based interactive story game with a built-in story editor.
+
+## Features
+
+- **Interactive Story Game**: Play through branching narratives with multiple choices
+- **Story Editor** (`/new`): Create your own interactive stories with:
+  - **Visual Editor Mode**: User-friendly interface for beginners (no JSON knowledge required)
+  - **Text/JSON Editor Mode**: Direct JSON editing for advanced users
+  - **Live Preview**: See your story in action as you edit
+  - **Import/Export**: Save and load story data as JSON files
 
 ## Creating a project
 
